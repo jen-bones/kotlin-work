@@ -6,5 +6,8 @@ import kotlin.io.path.readText
 import kotlin.io.path.writeText
 
 fun main() {
-    // Add your code here
+    val fp = Path("test.txt")
+    fp.writeText("first thing\n")
+    fp.writeText("second thing\n")
+    fp.appendText("third thing\n")
 }
