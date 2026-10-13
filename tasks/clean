@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+BLUE='\033[34m'; RED='033[31m'; RESET='\033[0m'
+trap 'echo -e "\nScript Terminated by User."; exit 130 ' INT
+
+for dir in */; do
+    if [ -x "$dir/kotlin" ]; then
+	echo "===> cleaning $dir"
+	(cd "$dir" && ./kotlin clean) || echo -e "${RED}!! Failed in $dir${RESET}"
+    else
+	echo -e "${BLUE}-- Skipping $dir (no ./kotlin found)${RESET}"
+    fi
+done
