@@ -3,10 +3,18 @@
 
 fun redact(inStr: String, redStr: String, redChar: Char = 'X'): String {
     var outStr = ""; var repStr = ""
-    repeat(redStr.length){repStr = repStr + redChar}
-    while(inStr.contains(redStr)){
-        outStr = inStr.replace(redStr, repStr)
-        }     
+    
+    if (redStr != ""){
+        repeat(redStr.length){repStr = repStr + redChar}
+        outStr = inStr
+        
+        while(inStr.contains(redStr)){
+            outStr = inStr.replace(redStr, repStr)
+        }
+
+    } else {
+        outStr = inStr
+    }   
     
     return outStr
 }
