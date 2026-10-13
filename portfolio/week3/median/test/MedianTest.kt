@@ -15,6 +15,22 @@ class MedianTest : FreeSpec({
             median(listOf())
         }
     }
+    
+    "Median of 1 value {1.0} is correct"{
+        median(listOf<Float>(1.0f)) shouldBe (1.0f)
+    }
 
-    // Write four more tests here
+    "Median of odd number of values {1.0, 2.0, 3.0, 4.0, 5.0} is correct"{
+        median(listOf<Float>(1.0f, 2.0f, 3.0f, 4.0f, 5.0f)) shouldBe (3.0f)
+    }
+
+    "Median of even number of values {1.0, 2.0, 3.0, 4.0} is correct"{
+        median(listOf<Float>(1.0f, 2.0f, 3.0f, 4.0f)) shouldBe (3.0f)
+    }
+
+    "Median of unsorted of values {5.0, 2.0, 4.0, 3.0, 1.0} is correct"{
+        median(listOf<Float>(5.0f, 2.0f, 4.0f, 3.0f, 1.0f)) shouldBe (3.0f)
+    }
+
+
 })

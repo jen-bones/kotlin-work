@@ -8,7 +8,7 @@ fun redact(inStr: String, redStr: String, redChar: Char = 'X'): String {
         repeat(redStr.length){repStr = repStr + redChar}
         outStr = inStr
         
-        while(inStr.contains(redStr)){
+        if(inStr.contains(redStr)){
             outStr = inStr.replace(redStr, repStr)
         }
 
