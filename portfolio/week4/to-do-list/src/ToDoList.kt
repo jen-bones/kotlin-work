@@ -37,7 +37,11 @@ class ToDoList() {
     fun deleteDone(): Boolean {
         // Write code here to remove items with status of Done
         // Return true if any were removed, false if none were removed
-        return false
+        if () {
+            
+        }else{
+            return false
+            }
     }
 
     fun getItems(status: ItemStatus? = null): List<ToDoItem> {

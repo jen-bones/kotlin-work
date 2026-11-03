@@ -7,6 +7,6 @@ fun median(values: List<Float>): Float{
     if (values.size % 2 == 1){
         return values.sorted()[((values.size + 1)/2) - 1]
     } else {
-        return values.sorted()[(values.size/2)-1] + values.sorted()[(((values.size/2) + 1) / 2)-1]
+         return (values.sorted()[(values.size/2) - 1] + values.sorted()[values.size/2]) / 2f
     }
 }
